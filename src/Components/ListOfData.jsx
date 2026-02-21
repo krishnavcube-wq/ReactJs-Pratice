@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const ListOfData = () => {
@@ -26,11 +27,12 @@ const ListOfData = () => {
         fetchData();
     },[])
 
+   const navigate= useNavigate();
     return (
         <div>
             
             <h2>User List</h2>
-
+            <h2 onClick={()=>navigate("/edit:id")}>Edit Data</h2>
             <table>
                 <thead>
                     <tr>
@@ -38,6 +40,7 @@ const ListOfData = () => {
                         <th>Name</th>
                         <th>EmailId</th>
                         <th>Address</th>
+                        
                     </tr>
                 </thead>
                 <tbody>
