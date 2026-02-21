@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<ListOfData/>}></Route>
-          <Route path='/edit:id' element={<EditComponent/>}></Route>
+          <Route path='/edit/:id' element={<EditComponent/>}></Route>
           <Route path='/insert' element={<PostDataUsing/>}></Route>
         </Routes>
       </Router>

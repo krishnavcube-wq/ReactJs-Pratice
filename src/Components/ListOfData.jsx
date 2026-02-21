@@ -40,7 +40,7 @@ const ListOfData = () => {
                         <th>Name</th>
                         <th>EmailId</th>
                         <th>Address</th>
-                        
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +50,11 @@ const ListOfData = () => {
                             <td>{user.name}</td>
                             <td>{user.email}</td>
                             <td>{user.address}</td>
+                            <td>
+                                <button onClick={() => navigate(`/edit/${user.id}`)}>
+                                    Edit
+                                </button>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
