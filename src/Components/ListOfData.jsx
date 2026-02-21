@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 
@@ -51,7 +51,7 @@ const ListOfData = () => {
                             <td>{user.email}</td>
                             <td>{user.address}</td>
                             <td>
-                                <button onClick={() => navigate(`/edit/${user.id}`)}>
+                                <button onClick={() => navigate("/edit/"+user.id)}>
                                     Edit
                                 </button>
                             </td>
